@@ -1,7 +1,7 @@
 // Word Count Service
 
 import axios from 'axios';
-const url = 'http://localhost:8081/services/radwords/api/no-auth/count/';
+const url = 'http://localhost:8081/services/radwords/api/word/count/';
 const WordCountService = {
     getCount(word){
         return axios

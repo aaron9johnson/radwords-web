@@ -3,7 +3,7 @@
     <h1>Get Word</h1>
     <br>
     <textarea big v-model="text" placeholder="enter word here"></textarea>
-    <table>
+    <table v-if="word">
       <th v-for="(value, key) in word" v-bind:key="key">
         {{ key.toUpperCase() }}
       </th>
