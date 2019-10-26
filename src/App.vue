@@ -1,19 +1,24 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1 v-if="this.$router.currentRoute.path == '/'">
+      Radwords
+    </h1>
+    <router-view></router-view>
+    <p v-if="this.$router.currentRoute.path != '/word'">
+      <router-link link to="/word">Get Word</router-link>
+    </p>
+    <p v-if="this.$router.currentRoute.path != '/text'">
+      <router-link link to="/text">Submit Text</router-link>
+    </p>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+  name: 'app'
 }
+
 </script>
 
 <style>
